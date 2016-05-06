@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Content/cover.css" rel="stylesheet" />
+    <title>Zaka LeroLero</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+
+    <div class="site-wrapper">
+        <div class="site-wrapper-inner">
+            <div class="cover-container">
+
+                <div class="masthead clearfix">
+                    <p class="inner">
+                        <h1 class="masthead-brand">Zaka Lero Lero Generator</h1>
+                    </p>
+                </div>
+
+                <div class="inner cover">
+                    <h1 class="cover-heading"></h1>
+                    <p class="lead" id="welcome">O que o captcha mestre está pensando...?</p>
+                    <br />
+                    <p class="lead text-justify" id="think"></p>
+                </div>
+
+                <div class="mastfoot">
+                    <div class="inner cover">
+                        <p class="lead">
+                            <a href="#" class="btn btn-lg btn-default" id="btnForce">Fala Mestre!</a>
+                        </p>
+                    </div>
+                    <div class="inner">
+                        <p>
+                            © 2016 by <a href="#">@momo</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="js/lerolero.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            lerolero.init();
+
+            $("#btnForce").click(function ()
+            {
+                $("#welcome").hide();
+                $('#think').text(lerolero.generate());
+            });
+        });
+    </script>
+</body>
+</html>
